@@ -1,15 +1,22 @@
 import './globals.css';
+import SiteHeader from '../components/SiteHeader';
 
 export const metadata = {
   title: 'Outly — Brisbane events & experiences',
   description:
-    'The best nights out and hands-on days in Brisbane, in one place. Launching soon.',
+    'Discover the best events and experiences in Brisbane — comedy, live music, pottery, cooking and more.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+        <footer className="site-footer">
+          <div className="container">Outly · working preview · Brisbane</div>
+        </footer>
+      </body>
     </html>
   );
 }
